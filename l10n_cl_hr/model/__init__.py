@@ -1,4 +1,5 @@
 from . import hr_employee
+from . import hr_cl_parameters
 from . import hr_payslip
 from . import hr_afp
 from . import hr_contract_type

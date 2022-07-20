@@ -11,11 +11,14 @@
 
         <menuitem
             name="Libro de Remuneraciones"
-            parent="menu_cl_hr_payroll_reports"
+            parent="hr_payroll.menu_hr_payroll_report"
             sequence="10"
             action="action_salary_books"
             id="menu_salary_books"
            />
+	<!--
+            parent="menu_cl_hr_payroll_reports"
+	-->
 
         <record id="view_salary_employee_month" model="ir.ui.view">
             <field name="name">Libro de Remuneraciones</field>

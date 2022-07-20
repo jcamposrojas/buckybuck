@@ -29,11 +29,17 @@
 			</field>
 		</record>
 
-
+		<!-- deprecado
 		<act_window id="hr_afp_action" name="Fondos de Pensión"
 			res_model="hr.afp" view_mode="tree,form" />
+		-->
 
-		<menuitem id="hr_afp_menu" parent="menu_cl_hr_payroll_configuration"
-			action="hr_afp_action" sequence="14" />
+		<record id="hr_afp_action" model="ir.actions.act_window">
+			<field name="name">Fondos de Pensión</field>
+			<field name="res_model">hr.afp</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="hr_afp_menu" parent="menu_cl_hr_payroll_configuration" action="hr_afp_action" sequence="14" />
 	</data>
 </odoo>

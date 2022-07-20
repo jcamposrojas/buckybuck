@@ -191,37 +191,74 @@
 	</record>
 
 	<!-- Menu View -->
-	<act_window id="hr_indicadores_previsionales_action"
+	<!-- deprecado 
+	act_window id="hr_indicadores_previsionales_action"
 		name="Indicadores Previsionales" res_model="hr.indicadores"
-		view_mode="tree,form" />
+		view_mode="tree,form" 
+	-->
+
+	<record id="hr_indicadores_previsionales_action" model="ir.actions.act_window">
+		<field name="name">Indicadores Previsionales</field>
+		<field name="res_model">hr.indicadores</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
 
 	<menuitem id="hr_indicadores_previsionales_menu"
 		parent="menu_cl_hr_payroll_indicators"
 		action="hr_indicadores_previsionales_action" sequence="10" />
 
+	<!-- deprecado 
 	<act_window id="hr_isapre_action" name="Isapres"
 		res_model="hr.isapre" view_mode="tree,form" />
+	-->
+	<record id="hr_isapre_action" model="ir.actions.act_window">
+		<field name="name">Isapres</field>
+		<field name="res_model">hr.isapre</field>
+		<field name="view_mode">tree,form</field>
+	</record>
 
 	<menuitem id="hr_isapres_menu"
 		parent="menu_cl_hr_payroll_configuration" action="hr_isapre_action"
 		sequence="11" />
 
+	<!-- deprecado 
 	<act_window id="hr_ccaf_action" name="CCAF"
 		res_model="hr.ccaf" view_mode="tree,form" />
+	-->
+	<record id="hr_ccaf_action" model="ir.actions.act_window">
+		<field name="name">CCAF</field>
+		<field name="res_model">hr.ccaf</field>
+		<field name="view_mode">tree,form</field>
+	</record>
 
 	<menuitem id="hr_ccaf_menu"
 		parent="menu_cl_hr_payroll_configuration" action="hr_ccaf_action"
 		sequence="12" />
 
+	<!-- deprecado 
 	<act_window id="hr_mutual_action" name="Mutualidad"
 		res_model="hr.mutual" view_mode="tree,form" />
+	-->
+	<record id="hr_mutual_action" model="ir.actions.act_window">
+		<field name="name">Mutualidad</field>
+		<field name="res_model">hr.mutual</field>
+		<field name="view_mode">tree,form</field>
+	</record>
 
 	<menuitem id="hr_mutual_menu"
 		parent="menu_cl_hr_payroll_configuration" action="hr_mutual_action"
 		sequence="13" />
 
+	<!-- deprecado 
 	<act_window id="hr_apv_action"
 		name="Institución Autorizada APV" res_model="hr.apv" view_mode="tree,form" />
+	-->
+	<record id="hr_apv_action" model="ir.actions.act_window">
+		<field name="name">Institución Autorizada APV</field>
+		<field name="res_model">hr.apv</field>
+		<field name="view_mode">tree,form</field>
+	</record>
 
 	<menuitem id="hr_apv_menu"
 		parent="menu_cl_hr_payroll_configuration" action="hr_apv_action"

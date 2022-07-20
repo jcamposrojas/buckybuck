@@ -6,14 +6,22 @@
             <field name="model">hr.payslip</field>
             <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
             <field name="arch" type="xml">
-                <field name="paid" position="after">
+	         <field name="credit_note" position="after">
                     <field name="indicadores_id" required="1"/>
-	    </field> 
-	    <field name="credit_note" position="after">
 		    <field name="movimientos_personal" String="Código Movimiento"/>
                     <field name="date_start_mp" String="Inicio MP" attrs="{'invisible': [('movimientos_personal', '=', '0')]}"/>
 		    <field name="date_end_mp" String="Fin MP" attrs="{'invisible': [('movimientos_personal', '=', '0')]}"/>
+		</field>
+	        <field name="input_line_ids" position="after">
+		    <separator string="Parámetros Adicionales"/>
+		    <field name="parameters_ids">
+		        <tree string="Parámetros" create="0" delete="0">
+                                <field name="name"/>
+                                <field name="number_of_days" readonly="1" force_save="1"/>
+                                <field name="number_of_hours" readonly="1" force_save="1"/>
+                        </tree>
 		    </field>
+	        </field>
 	    </field>
     </record>
 

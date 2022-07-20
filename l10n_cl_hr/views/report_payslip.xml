@@ -51,7 +51,7 @@
                       <tr>
                       	  <td><span t-field="o.contract_id.department_id" /></td>
                           <td><span t-field="o.contract_id.job_id"/></td>
-                          <td><span t-field="o.contract_id.type_id"/></td>
+                          <td><span t-field="o.contract_id.contract_type_id"/></td>
                           <td><span t-esc="o.contract_id.analytic_account_id.code or '001'" class="float-right"/></td>
                       </tr>
                     </tbody>

@@ -546,7 +546,7 @@ else:
             <field name="name">ISAPRES X PAGAR</field>
 	    <field name="sequence" eval="28"/>
 	    <field name="struct_id" ref="hr_struct_cl"/>
-            <field name="code">COLMENA</field>
+            <field name="code">ISAPRES</field>
             <field name="category_id" ref="SUBT"/>
             <field name="condition_select">python</field>
             <field name="condition_python">result = contract.isapre_id.name != 'FONASA'</field>
@@ -581,7 +581,7 @@ else:
 	    <field name="sequence" eval="34"/>
 	    <field name="struct_id" ref="hr_struct_cl"/>
             <field name="code">FONASA</field>
-            <field name="category_id" ref="SUBT"/>
+            <field name="category_id" ref="SALUD"/>
             <field name="condition_select">python</field>
             <field name="condition_python">result = contract.isapre_id.name == 'FONASA'</field>
             <field name="amount_select">code</field>
@@ -668,7 +668,7 @@ else:
             <field name="condition_select">python</field>
             <field name="condition_python">result = (contract.anticipo_sueldo > 0) or (inputs.ASUE and inputs.ASUE.amount > 0)</field>
             <field name="amount_select">code</field>
-            <field name="amount_python_compute">if  (inputs.ASUE.amount > 0):
+            <field name="amount_python_compute">if(inputs.ASUE and inputs.ASUE.amount > 0):
      result = inputs.ASUE.amount
 else:
      result = contract.anticipo_sueldo</field>
